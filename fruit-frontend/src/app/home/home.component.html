@@ -1,0 +1,173 @@
+<header>
+  <div class="navbar navbar-dark bg-success shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+      <div class="m-1 toggle-button">
+        <button class="btn" (click)="showSide = !showSide"><i class="fa-solid fa-bars text-light"></i></button>
+        <div *ngIf="showSide">
+          <app-sidenav></app-sidenav>
+        </div>
+      </div>
+      
+      <H2><i>Fruit Basket</i></H2>
+      <div class=" from-group">
+        <input type="text" class="form-control" placeholder="search product" [(ngModel)]="searchItem">
+      </div>
+      <span class="fas fa-search search-icon" (click)="fruitsItems"></span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+
+
+    <div class="shoping" href="#" [routerLink]="'/cart'">
+      <a class="btn btn-success">
+        <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+        <div style="font-size: 10px;" class="badge bg-danger">+</div>
+      </a>
+    </div>
+
+    <div class="toggle-button">
+      <a class="btn btn-success " routerLink="/orders">
+        <h3><i class="fa-solid fa-bag-shopping"></i></h3>
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="jt-carousel">
+  <div class="container-fluid">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../assets/immages/fruitbanner.jpg" height="550rem" class="d-block w-100"
+            alt="#carouselExampleControls">
+          <div class="carousel-caption ">
+            <h1 class="frotnend-text">Fresh, Tasty, Quality, Delivered.</h1>
+            <p class="frotnend-text1">We source the best quality produce on a daily basis,</p>
+            <p class="frotnend-text1">  delivering to our loyal customers nationwide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/immages/1.png" height="550rem" class="d-block w-100"
+            alt="#carouselExampleControls">
+            <div class="carousel-caption ">
+              <h1 class="text">"FRESHNESS IS OUR PROMISE, QUALITY IS OUR GUARANTEE, AND SATISFACTION IS OUR GOAL."</h1>
+              
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/immages/2.png" height="550rem" class="d-block w-100"
+            alt="#carouselExampleControls">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/immages/colorful-collage-fruits.jpg" height="550rem" class="d-block w-100"
+            alt="#carouselExampleControls">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="Welcome">
+  <h1> "Freshness delivered to your doorstep."</h1>
+</section>
+
+<section class="jt-card mt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 jt-card mt-3 " *ngFor="let product of fruitsItems()">
+        <div class="card">
+          <div class="card-body">
+            <img [src]="product.productImageURL" alt="img">
+            <h5 class="card-title">{{ product.productName }}</h5>
+            <h5 class="card-price">Price ₹ <span #price_ptag>{{
+                product.productPrice }}/kg</span></h5>
+            <!-- <p class="card-text">{{ product.productDescription }}</p> -->
+            <div class="button-row">
+              <div>
+                <button class="btn btn-success" (click)="addCart(product.productId, product.counter)">Add
+                  to Cart</button>
+
+              </div>
+              <div>
+                <button (click)="counterClien('+',
+                  product.productId)">+</button>
+                <span>{{ product.counter }}</span>
+                <button (click)="counterClien('-',
+                  product.productId)">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<div class="quote">
+  <p>"knowledge is knowing a tomato is a fruit;<br>wisdom is not putting it in the fruit salad."</p>
+</div>
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">What we do</a></li>
+          <li><a href="#">our Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Affiliated Program</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h5>About Us</h5>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Meet the Team</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Customer Service</h5>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Payment Options</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Best Sellers</a></li>
+          <li><a href="#">Sale</a></li>
+          <li><a href="#">Order Status</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h5>Connect With Us</h5>
+        <ul>
+          <li> <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com" ><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com" ><i class="fab fa-facebook"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+     
+
+

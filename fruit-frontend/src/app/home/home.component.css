@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Josefin+Sans:ital@1&family=Libre+Franklin:wght@700&display=swap');
+.form-control {
+    border-radius: 5px;
+    width: 500px;
+    margin-left: 40px;
+    top: 30px;
+  }
+ 
+  .search-icon {
+    position: absolute;
+    z-index: 9;
+    right: 52%;
+    top: 25px;
+    color: black;
+  }
+  
+  .shoping{
+  position: absolute;
+  left: 90%;
+  }
+  
+  .ul.links li{
+    margin: 0;
+    padding: 0;
+    list-style: none ;
+  }
+
+
+
+.container-fluid{
+ transform: translatey(0.5%);
+
+ 
+}
+
+
+  .button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .button-row div:last-child button {
+    all: unset;
+    cursor: pointer;
+  }
+  .button-row div:last-child {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
+  .card img {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .jt-card:hover {
+    box-shadow: 5px 10px 5px rgb(112, 151, 112);
+    
+  }
+  
+  .content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  .social-link{
+    color: #ccc;
+   }
+   .carousel-caption {
+   text-align: center;
+    top: 10rem;
+    bottom: auto;
+    left: 30rem;
+    right: 5rem;
+  }
+  
+   .frotnend-text{
+    line-height: 1.8;
+    color: rgb(7, 7, 7);
+    font-family: 'Libre Franklin', sans-serif;
+   text-shadow: 1px 1px #6a6666;
+   }
+
+   .frotnend-text1{
+    font-size: 2em;
+    line-height: 25px;
+    font-weight: 600;
+    color: #333333;
+    font-family: 'Libre Franklin', sans-serif;
+    text-shadow: 1px 1px #6a6666;
+   }
+   .text{
+   padding-top: 4rem;
+    font-size: 2.3rem;
+    line-height: 1.5;
+    text-align: center;
+    color: rgb(255, 253, 253);
+    font-family: 'Libre Franklin', sans-serif;
+   text-shadow: 1px 1px #343232;
+   }
+
+  .Welcome{
+    color: #4e5d24;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 5px;
+    font-weight: 400;
+    font-family: 'Alkatra', cursive;
+  
+  }
+  .navbar {
+    margin-top: 0px;
+   
+  }
+
+  
+
+   footer {
+    background-color: #b5dc9391;
+    padding: 50px 0;
+    font-size: 14px;
+  }
+  
+  footer h5 {
+    color: #1e1c1c;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer ul li a {
+    color: #353333;
+    text-decoration: none;
+  }
+  
+  footer ul li a:hover {
+    color: #000000;
+  }
+  
+
+  
+.quote{
+  height:20rem;
+  padding: 7.8rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: 'Alkatra', cursive;
+   color: #4e5d24;
+  text-align: center;
+  
+  
+}

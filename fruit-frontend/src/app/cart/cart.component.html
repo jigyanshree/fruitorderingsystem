@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light bg-success">
+    <div class="container-fluid">
+        <h1>My Cart</h1>
+    </div>
+</nav>
+<button class="btn btn-success m-3" (click)="onOrder()">Order Now</button>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Fruit Name </th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="carts.length == 0">
+            <td colspan="5">No item added</td>
+        </tr>
+        <tr *ngFor="let cart of carts; let idx = index">
+            <th scope="row">{{ idx + 1}}</th>
+            <td>{{cart['product']['productName']}}</td>
+            <td>{{cart['counter']}}</td>
+            <td>{{cart['counter'] * cart['product']['productPrice']}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="onRemove(cart['id'])">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Total: {{total}}</h2>

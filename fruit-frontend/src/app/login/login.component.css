@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+
+  }
+  .container {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    place-items: center;
+    background-image: url("https://t3.ftcdn.net/jpg/03/09/90/26/240_F_309902682_6Skuz4I4IjOBqHEdbQXam6tUbV5hVZLR.jpg");
+  }
+  
+  form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background: linear-gradient(to top left,rgb(125, 181, 102),#6c9f7d33);
+    border-radius:8px ;
+    box-shadow: 2px 2px 5px  rgb(102, 94, 110); ;
+
+  }
+  h1 {
+    text-align: center;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  .Register{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
